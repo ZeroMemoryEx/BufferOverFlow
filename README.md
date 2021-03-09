@@ -13,11 +13,11 @@ to write the data to the buffer overwrites adjacent memory locations.
 <br>
 
 With the buffer overflow vulnerability, we can easily inject 💉 malicious code into the memory
-of the running program. 
+of the running program. <br>
 
-To jump to the malicious code that we have injected into the target stack, we need to know
-the absolute address of 
-👉 EIP 👈. If we know the address,
+To jump to the malicious code that we have injected into the target stack, we need to know<br>
+the absolute address of <br>
+👉 EIP 👈. If we know the address,<br>
 we can use this address to overwrite the memory that holds the return address and when the
-function returns, it will return to our malicious code.
+function returns, it will return to our malicious code.<br>
 and  boom you will gain root access . 
