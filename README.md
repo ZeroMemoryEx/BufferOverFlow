@@ -18,6 +18,6 @@ of the running program. <br>
 To jump to the malicious code that we have injected into the target stack, we need to know<br>
 the absolute address of <br>
 👉 EIP 👈. If we know the address,<br>
-we can use this address to overwrite the memory that holds the return address and when the
+we can use it to overwrite the memory that holds the return address and when the
 function returns, it will return to our malicious code.<br>
-and  boom you will gain root access . 
+and boom we will gain root access . 
