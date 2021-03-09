@@ -38,5 +38,5 @@ try:
     s.close()
 
 except:
-    print 'error connecting server'
+    print 'error connecting to server'
     sys.exit()
