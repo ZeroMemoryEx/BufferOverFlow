@@ -15,7 +15,7 @@ to write the data to the buffer overwrites adjacent memory locations.
 With the buffer overflow vulnerability in the program, we can easily inject malicious code into the memory
 of the running program. 
 
-To jump to the malicious code that we have injected into the target program’s stack, we need to know
-the absolute address of  EIP. If we know the address,
+To jump to the malicious code that we have injected into the target stack, we need to know
+the absolute address of EIP. If we know the address,
 we can use this address to overwrite the memory that holds the return address. Therefore, when the
 function returns, it will return to our malicious code.
